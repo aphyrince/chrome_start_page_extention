@@ -12,3 +12,26 @@
     --color-accent: #ff3f7f;
     --color-sub-accent: #ffc400;
 }
+
+@property --bg-ratio {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 30%;
+}
+
+@property --bg-deg {
+    syntax: "<deg>";
+    inherits: false;
+    initial-value: 60deg;
+}
+
+@keyframes shift-ratio {
+    0% {
+        --bg-ratio: 30%;
+        --bg-deg: 60deg;
+    }
+    100% {
+        --bg-ratio: 60%;
+        --bg-deg: 45deg;
+    }
+}
