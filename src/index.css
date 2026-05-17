@@ -5,3 +5,10 @@
     font-weight: 400;
     font-style: normal;
 }
+
+@theme {
+    --color-dominant: #450693;
+    --color-surface: #8c00ff;
+    --color-accent: #ff3f7f;
+    --color-sub-accent: #ffc400;
+}
