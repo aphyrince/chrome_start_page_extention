@@ -1,6 +1,6 @@
 import { Settings } from 'lucide-react';
 import React, { useCallback } from 'react';
-import useSidebarStore from '../hooks/useSidebarStore';
+import useSidebarStore from '../../hooks/useSidebarStore';
 
 const SettingBtn = () => {
     const { open, toggle } = useSidebarStore();

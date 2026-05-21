@@ -1,7 +1,7 @@
-import BookMark from '../components/BookMark';
+import BookMark from '../components/BookMark/BookMark';
 import Clock from '../components/Clock';
-import SettingBtn from '../components/SettingBtn';
-import SideBar from '../components/SideBar';
+import SettingBtn from '../components/Sidebar/SettingBtn';
+import SideBar from '../components/Sidebar/SideBar';
 
 const App = () => {
     return (
