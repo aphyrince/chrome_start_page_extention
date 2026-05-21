@@ -1,7 +1,7 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 .gowun-dodum-regular {
-    font-family: "Gowun Dodum", sans-serif;
+    font-family: 'Gowun Dodum', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -14,24 +14,16 @@
 }
 
 @property --bg-ratio {
-    syntax: "<percentage>";
+    syntax: '<percentage>';
     inherits: false;
     initial-value: 30%;
-}
-
-@property --bg-deg {
-    syntax: "<deg>";
-    inherits: false;
-    initial-value: 60deg;
 }
 
 @keyframes shift-ratio {
     0% {
         --bg-ratio: 30%;
-        --bg-deg: 60deg;
     }
     100% {
         --bg-ratio: 60%;
-        --bg-deg: 45deg;
     }
 }
