@@ -12,7 +12,7 @@ const SettingBtn = () => {
     return (
         <button
             className='absolute right-4 bottom-4 p-4 rotate-0 hover:rotate-45 scale-100 hover:scale-125 cursor-pointer duration-300'
-            style={{ right: `${open ? '25vw' : '4px'}` }}
+            style={{ right: `${open ? '400px' : '4px'}` }}
             onClick={handleClick}
         >
             <Settings size={40} color='#fff' />
