@@ -1,5 +1,5 @@
 const checkUrlWithRegex = (urlString: string) => {
-    const regex = /\.[a-z]{2,6}$/i;
+    const regex = /\.[a-z]{2,7}$/i;
     return regex.test(urlString);
 };
 

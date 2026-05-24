@@ -1,5 +1,6 @@
 import { create } from 'zustand';
-import { persist, StateStorage, createJSONStorage } from 'zustand/middleware';
+import { persist, createJSONStorage } from 'zustand/middleware';
+import type { StateStorage } from 'zustand/middleware';
 
 interface Bookmark {
     id: string;
