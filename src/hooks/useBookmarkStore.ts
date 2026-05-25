@@ -13,13 +13,14 @@ interface BookmarkStore {
     add: (title: string, url: string) => void;
     remove: (id: string) => void;
 }
-
+//@ts-expect-error chrome은 확장프로그램에서만 존재. 빌드하면 기능함.
 const isExtension = typeof chrome !== 'undefined' && chrome.storage && chrome.storage.local;
 
 const chromeStorageAdapter: StateStorage = {
     getItem: async (name: string): Promise<string | null> => {
         if (isExtension) {
             return new Promise((resolve) => {
+                //@ts-expect-error chrome은 확장프로그램에서만 존재. 빌드하면 기능함.
                 chrome.storage.local.get([name], (result) => {
                     resolve(result[name] ? JSON.stringify(result[name]) : null);
                 });
@@ -31,6 +32,7 @@ const chromeStorageAdapter: StateStorage = {
         const parsedValue = JSON.parse(value);
         if (isExtension) {
             return new Promise((resolve) => {
+                //@ts-expect-error chrome은 확장프로그램에서만 존재. 빌드하면 기능함.
                 chrome.storage.local.set({ [name]: parsedValue }, () => resolve());
             });
         }
@@ -39,6 +41,7 @@ const chromeStorageAdapter: StateStorage = {
     removeItem: async (name: string): Promise<void> => {
         if (isExtension) {
             return new Promise((resolve) => {
+                //@ts-expect-error chrome은 확장프로그램에서만 존재. 빌드하면 기능함.
                 chrome.storage.local.remove([name], () => resolve());
             });
         }
