@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "나만의 커스텀 새 탭",
-    "version": "1.0.0",
+    "version": "1.0.5",
     "description": "새 탭을 열 때마다 내가 지정한 대시보드가 나옵니다.",
     "chrome_url_overrides": {
         "newtab": "index.html"
